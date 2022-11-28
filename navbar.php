@@ -16,7 +16,7 @@
   <nav>
     <div class="logo">
       <a href="index.php">
-        <img src="image/logo.png" alt="logo">
+        <img src="image/logos.png" alt="logo">
       </a>
     </div>
     <script>
@@ -25,11 +25,11 @@
       }
     </script>
     <ul class="menu">
-      <li><a href="index.php">Home</a><i class="bi bi-chevron-right panah"></i></li>
-      <li><a href="kriteria.php">Kriteria</a><i class="bi bi-chevron-right panah"></i></li>
-      <li><a href="alternatif.php">Alternatif</a><i class="bi bi-chevron-right panah"></i></li>
-      <li><a href="bobot_kriteria.php">Perbandingan Kriteria</a><i class="bi bi-chevron-right panah"></i></li>
-      <li onclick="drpdn()"><span>Perbandingan Alternatif</span><i class="bi bi-chevron-right panah"></i>
+      <li><a href="index.php">Home</a><i class="bi bi-dash"></i></li>
+      <li><a href="kriteria.php">Kriteria</a><i class="bi bi-dash"></i></li>
+      <li><a href="alternatif.php">Alternatif</a><i class="bi bi-dash"></i></li>
+      <li><a href="bobot_kriteria.php">Perbandingan Kriteria</a><i class="bi bi-dash"></i></li>
+      <li onclick="drpdn()"><span>Perbandingan Alternatif</span><i class="bi bi-dash"></i>
         <ul class="custom-dd" id="custom">
           <?php
 						if (getJumlahKriteria() > 0) {

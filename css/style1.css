@@ -27,7 +27,7 @@ nav{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #6e91ff;
+  background-color: #FF8A1F;
   height: 60px;
 }
 
@@ -108,13 +108,13 @@ nav ul li span:hover{
 }
 
 .main-home .background{
-  background-color: #6e91ff;
+  background-color: #FF8A1F;
   color: #6e91ff;
   width: 50%;
   height: 460px;
   margin-top: -360px;
   margin-left: 320px;
-  box-shadow: 8px 10px 8px #abbffd;
+  box-shadow: 8px 10px 8px #FF8A1F;
 }
 
 

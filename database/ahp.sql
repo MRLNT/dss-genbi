@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 01, 2022 at 03:18 PM
--- Server version: 10.4.24-MariaDB
--- PHP Version: 7.4.29
+-- Waktu pembuatan: 28 Nov 2022 pada 05.53
+-- Versi server: 10.4.21-MariaDB
+-- Versi PHP: 7.4.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `alternatif`
+-- Struktur dari tabel `alternatif`
 --
 
 CREATE TABLE `alternatif` (
@@ -33,18 +33,18 @@ CREATE TABLE `alternatif` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `alternatif`
+-- Dumping data untuk tabel `alternatif`
 --
 
 INSERT INTO `alternatif` (`id`, `nama`) VALUES
-(19, 'SMK 1 Nganjuk'),
-(20, 'SMK 2 Nganjuk'),
-(21, 'SMK 3 Nganjuk');
+(19, 'Charles & Keith'),
+(20, 'Elizabeth'),
+(21, 'Sophie Martin');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ir`
+-- Struktur dari tabel `ir`
 --
 
 CREATE TABLE `ir` (
@@ -53,7 +53,7 @@ CREATE TABLE `ir` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `ir`
+-- Dumping data untuk tabel `ir`
 --
 
 INSERT INTO `ir` (`jumlah`, `nilai`) VALUES
@@ -76,7 +76,7 @@ INSERT INTO `ir` (`jumlah`, `nilai`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kriteria`
+-- Struktur dari tabel `kriteria`
 --
 
 CREATE TABLE `kriteria` (
@@ -85,18 +85,18 @@ CREATE TABLE `kriteria` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `kriteria`
+-- Dumping data untuk tabel `kriteria`
 --
 
 INSERT INTO `kriteria` (`id`, `nama`) VALUES
-(34, 'Rata-rata nilai UN'),
-(33, 'Jarak Sekolah Rumah'),
-(32, 'Akreditasi');
+(34, 'Kualitas'),
+(33, 'Model'),
+(32, 'Harga');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `perbandingan_alternatif`
+-- Struktur dari tabel `perbandingan_alternatif`
 --
 
 CREATE TABLE `perbandingan_alternatif` (
@@ -108,24 +108,24 @@ CREATE TABLE `perbandingan_alternatif` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `perbandingan_alternatif`
+-- Dumping data untuk tabel `perbandingan_alternatif`
 --
 
 INSERT INTO `perbandingan_alternatif` (`id`, `alternatif1`, `alternatif2`, `pembanding`, `nilai`) VALUES
 (48, 20, 21, 34, 2),
-(47, 19, 21, 34, 4),
-(46, 19, 20, 34, 3),
+(47, 19, 21, 34, 3),
+(46, 19, 20, 34, 2),
 (45, 20, 21, 33, 2),
 (44, 19, 21, 33, 4),
 (43, 19, 20, 33, 3),
 (42, 20, 21, 32, 2),
-(41, 19, 21, 32, 4),
+(41, 19, 21, 32, 5),
 (40, 19, 20, 32, 3);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `perbandingan_kriteria`
+-- Struktur dari tabel `perbandingan_kriteria`
 --
 
 CREATE TABLE `perbandingan_kriteria` (
@@ -136,18 +136,18 @@ CREATE TABLE `perbandingan_kriteria` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `perbandingan_kriteria`
+-- Dumping data untuk tabel `perbandingan_kriteria`
 --
 
 INSERT INTO `perbandingan_kriteria` (`id`, `kriteria1`, `kriteria2`, `nilai`) VALUES
-(15, 33, 34, 0.333333),
-(14, 32, 34, 5),
-(13, 32, 33, 7);
+(15, 33, 34, 3.00003),
+(14, 32, 34, 0.5),
+(13, 32, 33, 0.25);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pv_alternatif`
+-- Struktur dari tabel `pv_alternatif`
 --
 
 CREATE TABLE `pv_alternatif` (
@@ -158,24 +158,24 @@ CREATE TABLE `pv_alternatif` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `pv_alternatif`
+-- Dumping data untuk tabel `pv_alternatif`
 --
 
 INSERT INTO `pv_alternatif` (`id`, `id_alternatif`, `id_kriteria`, `nilai`) VALUES
-(63, 20, 34, 0.239488),
-(62, 19, 34, 0.623225),
+(63, 20, 34, 0.297258),
+(62, 19, 34, 0.538961),
 (61, 21, 33, 0.137288),
-(64, 21, 34, 0.137288),
+(64, 21, 34, 0.163781),
 (60, 20, 33, 0.239488),
 (59, 19, 33, 0.623225),
-(58, 21, 32, 0.137288),
-(57, 20, 32, 0.239488),
-(56, 19, 32, 0.623225);
+(58, 21, 32, 0.122182),
+(57, 20, 32, 0.229871),
+(56, 19, 32, 0.647947);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pv_kriteria`
+-- Struktur dari tabel `pv_kriteria`
 --
 
 CREATE TABLE `pv_kriteria` (
@@ -184,18 +184,18 @@ CREATE TABLE `pv_kriteria` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `pv_kriteria`
+-- Dumping data untuk tabel `pv_kriteria`
 --
 
 INSERT INTO `pv_kriteria` (`id_kriteria`, `nilai`) VALUES
-(34, 0.193186),
-(33, 0.0833079),
-(32, 0.723506);
+(34, 0.239487),
+(33, 0.623226),
+(32, 0.137288);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ranking`
+-- Struktur dari tabel `ranking`
 --
 
 CREATE TABLE `ranking` (
@@ -204,96 +204,96 @@ CREATE TABLE `ranking` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `ranking`
+-- Dumping data untuk tabel `ranking`
 --
 
 INSERT INTO `ranking` (`id_alternatif`, `nilai`) VALUES
-(19, 0.623225),
-(20, 0.239488),
-(21, 0.137288);
+(19, 0.60644),
+(20, 0.252003),
+(21, 0.141559);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `alternatif`
+-- Indeks untuk tabel `alternatif`
 --
 ALTER TABLE `alternatif`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `ir`
+-- Indeks untuk tabel `ir`
 --
 ALTER TABLE `ir`
   ADD PRIMARY KEY (`jumlah`);
 
 --
--- Indexes for table `kriteria`
+-- Indeks untuk tabel `kriteria`
 --
 ALTER TABLE `kriteria`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `perbandingan_alternatif`
+-- Indeks untuk tabel `perbandingan_alternatif`
 --
 ALTER TABLE `perbandingan_alternatif`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `perbandingan_kriteria`
+-- Indeks untuk tabel `perbandingan_kriteria`
 --
 ALTER TABLE `perbandingan_kriteria`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `pv_alternatif`
+-- Indeks untuk tabel `pv_alternatif`
 --
 ALTER TABLE `pv_alternatif`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `pv_kriteria`
+-- Indeks untuk tabel `pv_kriteria`
 --
 ALTER TABLE `pv_kriteria`
   ADD PRIMARY KEY (`id_kriteria`);
 
 --
--- Indexes for table `ranking`
+-- Indeks untuk tabel `ranking`
 --
 ALTER TABLE `ranking`
   ADD PRIMARY KEY (`id_alternatif`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `alternatif`
+-- AUTO_INCREMENT untuk tabel `alternatif`
 --
 ALTER TABLE `alternatif`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
--- AUTO_INCREMENT for table `kriteria`
+-- AUTO_INCREMENT untuk tabel `kriteria`
 --
 ALTER TABLE `kriteria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
--- AUTO_INCREMENT for table `perbandingan_alternatif`
+-- AUTO_INCREMENT untuk tabel `perbandingan_alternatif`
 --
 ALTER TABLE `perbandingan_alternatif`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
--- AUTO_INCREMENT for table `perbandingan_kriteria`
+-- AUTO_INCREMENT untuk tabel `perbandingan_kriteria`
 --
 ALTER TABLE `perbandingan_kriteria`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `pv_alternatif`
+-- AUTO_INCREMENT untuk tabel `pv_alternatif`
 --
 ALTER TABLE `pv_alternatif`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
